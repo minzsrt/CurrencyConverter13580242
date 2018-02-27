@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Currency Converter</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/flags.css" rel="stylesheet">
+
+
+
+
+	<style type="text/css">
+		.maginct{
+			margin: 0px auto;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="index.html">Currency Converter</a>
+		 
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link text-info" href="index.html">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="history.php">History</a>
+		      </li>
+		    </ul>
+		  </div>
+	</nav>
+
+	<br>
+
+	<div class="col-md-12 maginct text-center">
+	
+	<div class="card maginct bg-dark" style="width: 40rem;">
+		<div class="card-header bg-info text-light">
+		    	<h3>Currency Converter</h3>
+		</div>
+
+		 <div class="card-body text-center maginct">
+		   <form class="row  maginct" action="currencyconverter.php" method="get">
+				
+				<div class="input-group">
+					<input type="number" class="form-control text-center" placeholder="0.00 THB" name="thb" style="border-radius: 3px;">
+				</div>
+				 
+				<div class="maginct text-info">
+				<h5><i class="fas fa-arrow-circle-down"></i></h5>
+				</div>
+
+				 <div class="input-group maginct">
+
+					        <div id="flagstrapselect"
+							     data-input-name="typecal"
+							     data-button-size="btn-lg"
+							     data-button-type="btn-warning"
+							     data-scrollable="true"
+							     data-scrollable-height="100px"
+							     >
+							</div>
+						
+						<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+						<script src="js/jquery.flagstrap.js"></script>
+					   <script>
+						    $('#flagstrapselect').flagStrap({
+							    countries: {
+							    	"": "",
+							    	"US": "USD",
+							        "JP": "JPY",
+							        "KR": "KRW",
+							        "GB": "GBP",
+							        "EU": "EUR"
+							    },
+							    buttonSize: "btn-lg",
+							    buttonType: "btn-info",
+							    labelMargin: "10px",
+							    scrollable: false,
+							    scrollableHeight: "380px"
+							});
+						</script>
+
+					   
+
+					  
+				</div>
+				
+				<button type="submit" class="btn btn-primary maginct" style="margin-top: 10px;">Calculate</button>
+
+				
+			</form>
+		</div>
+
+	</div>
+
+	
+
+	</div>
+
+
+
+</body>
+</html>
