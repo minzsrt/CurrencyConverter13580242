@@ -53,8 +53,8 @@
 						while($row = mysqli_fetch_assoc($sql_exe)) {
 						
 							
-							echo "<tr><td>".$row['thb']." THB</td>"
-							."<td>".$row['calculated']." ".$row['currency']."</td>"
+							echo "<tr><td>".number_format( $row['thb'], 2 )." THB</td>"
+							."<td>".number_format( $row['calculated'], 2 )." ".$row['currency']."</td>"
 							."<td>".$row['dateRecord']."</td>"
 							."<td>"."<a class='btn btn-outline-danger' href='delete.php?id=".$row['recordID']."'><i class='fas fa-trash'></i> DETELE</a>"."</td></tr>";
 
